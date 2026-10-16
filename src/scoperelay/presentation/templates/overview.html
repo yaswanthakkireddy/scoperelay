@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="eyebrow">OPERATIONS / OVERVIEW</div>
+<div class="page-heading"><div><h1>Evidence, not assertions.</h1><p>Follow a synthetic request from its source through trusted scope, interpretation and the protected resource. Missing execution is shown as missing.</p></div><span class="tag tag-neutral">READ-ONLY · SYNTHETIC</span></div>
+<div class="notice notice-warn"><div><strong>Release NO-GO · one genuine read-only A→B run, eight offline scripted cases</strong><p>Task 07G documents one local SC-01 tool-feedback run. The <a href="/evaluation">eight-case offline evaluation</a> exercises application contracts with doubles; it does not prove model reliability. SC-08 remains a semantic residual and coherent rollback remains unresolved.</p></div></div>
+<section class="notice {% if overview.quarantined %}notice-danger{% endif %}" aria-label="Current safety state">
+  <div><span class="notice-label">PROTECTED ADMISSION</span><strong>{{ overview.admission | replace('_',' ') }}</strong><p>{% if overview.quarantined %}Known recovery uncertainty is quarantined. Protected writes must not resume from this history.{% else %}This browser has no submission capability. The offline system may have deterministic evidence, but no browser action creates an effect.{% endif %}</p></div>
+  <a href="/recovery">Inspect recovery state <span aria-hidden="true">→</span></a>
+</section>
+<div class="section-title"><h2>Recorded footprint</h2><p>Counts from the currently selected local database.</p></div>
+<div class="metrics">
+  <div class="metric"><span>SCENARIOS</span><strong>{{ overview.counts.scenarios }}</strong><small>canonical synthetic cases</small></div>
+  <div class="metric"><span>EPISODES</span><strong>{{ overview.counts.episodes }}</strong><small>persisted runs</small></div>
+  <div class="metric"><span>AGENT INVOCATIONS</span><strong>{{ overview.counts.agent_invocations }}</strong><small>not inferred from fixture text</small></div>
+  <div class="metric"><span>QUEUE EFFECTS</span><strong>{{ overview.counts.queue_effects }}</strong><small>synthetic commitments only</small></div>
+</div>
+<div class="two-column">
+  <section class="panel"><div class="panel-head"><div><div class="eyebrow">01 / EXPLORE</div><h2>Scenario catalog</h2></div><a href="/scenarios">View all <span aria-hidden="true">→</span></a></div>
+    <div class="scenario-grid compact">{% for item in overview.scenarios %}<a class="scenario-tile" href="/scenarios/{{ item.scenario_id }}"><strong>{{ item.scenario_id }}</strong><span>{{ item.name }}</span><span aria-hidden="true">↗</span></a>{% endfor %}</div>
+  </section>
+  <section class="panel"><div class="panel-head"><div><div class="eyebrow">02 / PROVENANCE</div><h2>Current record</h2></div></div>
+    <dl class="fact-list"><div><dt>Database identity</dt><dd class="mono break">{{ overview.identity.identity_uuid }}</dd></div><div><dt>Application mode</dt><dd>LOCAL READ-ONLY WORKBENCH</dd></div><div><dt>LIVE-labeled invocations</dt><dd>{{ overview.live_invocations }} stored; inspect each tool event before claiming genuine inference</dd></div><div><dt>Approval records</dt><dd>{{ overview.counts.escalation_approvals }}</dd></div><div><dt>Resource attempts</dt><dd>{{ overview.counts.resource_attempts }}</dd></div></dl>
+    <p class="panel-note">Provider availability and model cost are not asserted here. No LIVE inference starts when this page loads.</p>
+  </section>
+</div>
+{% endblock %}

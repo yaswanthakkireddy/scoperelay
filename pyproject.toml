@@ -1,0 +1,39 @@
+[project]
+name = "scoperelay"
+version = "0.0.1"
+description = "ScopeRelay local synthetic engineering foundation"
+requires-python = ">=3.13,<3.14"
+license = { file = "LICENSE" }
+dependencies = [
+    "fastapi>=0.115,<1",
+    "jinja2>=3.1,<4",
+    "openai>=1,<3",
+    "pydantic>=2,<3",
+    "uvicorn>=0.30,<1",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.0.3,<10", "hypothesis>=6.0,<7", "httpx>=0.27,<1", "ruff==0.17.0"]
+
+[build-system]
+requires = ["setuptools>=75,<76"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["F811"] # Pytest fixtures are intentionally imported and shadowed by injected fixture parameters.
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"scoperelay.storage.migrations" = ["*.sql"]
+"scoperelay.presentation" = ["templates/*.html", "static/*.css", "static/*.svg"]
+"scoperelay.sandbox" = ["static/*.html", "static/*.css", "static/*.js", "static/*.svg"]

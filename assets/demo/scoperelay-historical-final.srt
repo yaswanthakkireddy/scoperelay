@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:04,000
+ScopeRelay: AI agent actions, governed before execution.
+
+2
+00:00:04,000 --> 00:00:09,000
+Historical recorded run. No new inference in this video.
+
+3
+00:00:09,000 --> 00:00:15,000
+Agent A's exact quotation is bound to the synthetic ticket.
+
+4
+00:00:15,000 --> 00:00:20,000
+Trusted checks and Agent B's bounded proposal remain unsent.
+
+5
+00:00:20,000 --> 00:00:27,000
+Recorded checkpoints and separate offline cases are inspectable.
+
+6
+00:00:27,000 --> 00:00:30,000
+No protected message was sent. Inspect the evidence.

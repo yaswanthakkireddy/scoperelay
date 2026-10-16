@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="eyebrow">EVIDENCE / RUN HISTORY</div>
+<div class="page-heading"><div><h1>Episodes</h1><p>Runs already stored in the database. This workbench cannot start agents or submit protected actions.</p></div><span class="tag tag-neutral">RECORDED ONLY</span></div>
+{% if episodes %}<div class="table-wrap"><table><thead><tr><th>Episode</th><th>Scenario</th><th>Execution mode</th><th>Workflow state</th><th>Agent invocations</th><th>Queue effects</th></tr></thead><tbody>{% for ep in episodes %}<tr><td><a href="/episodes/{{ ep.episode_id }}" class="mono">{{ ep.episode_id }}</a></td><td>{{ ep.scenario_id }}</td><td><span class="tag {% if ep.run_kind == 'LIVE' %}tag-blue{% else %}tag-neutral{% endif %}">{{ ep.run_kind }}</span></td><td>{{ ep.workflow_state }}</td><td>{{ ep.invocation_count }}</td><td>{{ ep.effect_count }}</td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty-state"><strong>No episodes recorded.</strong><p>The eight source fixtures are available under Scenarios. A source fixture does not imply an agent ran.</p><a href="/scenarios">Explore scenarios →</a></div>{% endif %}
+{% endblock %}

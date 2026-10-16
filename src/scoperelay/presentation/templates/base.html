@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{{ title }} · ScopeRelay</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/workbench.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="shell">
+    <aside class="rail" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="ScopeRelay overview"><span class="brand-mark">SR</span><span><strong>ScopeRelay</strong><small>Evidence workbench</small></span></a>
+      <div class="rail-label">INSPECT</div>
+      <nav class="navigation" aria-label="Workbench">
+        <a href="/" {% if section == 'overview' %}aria-current="page"{% endif %}>Overview</a>
+        <a href="/scenarios" {% if section == 'scenarios' %}aria-current="page"{% endif %}>Scenarios</a>
+        <a href="/evaluation" {% if section == 'evaluation' %}aria-current="page"{% endif %}>Offline evaluation</a>
+        <a href="/episodes" {% if section == 'episodes' %}aria-current="page"{% endif %}>Episodes</a>
+        <a href="/resource" {% if section == 'resource' %}aria-current="page"{% endif %}>Protected resource</a>
+        <a href="/recovery" {% if section == 'recovery' %}aria-current="page"{% endif %}>Recovery & approvals</a>
+      </nav>
+      <div class="rail-bottom"><span class="status-dot"></span> Local · synthetic only<br><small>Read-only reviewer surface</small></div>
+    </aside>
+    <div class="content-wrap">
+      <header class="topbar"><div class="topbar-title">S5 / SECURE BOUNDED ACTION EXTRACTION</div><div class="topbar-meta">{{ db }} <span class="topbar-divider">/</span> Read-only</div></header>
+      <main id="main" class="main" tabindex="-1">{% block content %}{% endblock %}</main>
+      <footer class="footer">Synthetic queue commitment is not external delivery. An authorization decision is not a resource effect. Known coherent rollback remains unresolved.</footer>
+    </div>
+  </div>
+</body>
+</html>

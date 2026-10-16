@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="eyebrow">EXPLORE / 8 CANONICAL CASES</div>
+<div class="page-heading"><div><h1>Scenario explorer</h1><p>Original source text is lower-trust input. Each case links to independently stored fixture authority and any actual episode evidence.</p></div><span class="tag tag-neutral">SOURCE ≠ AUTHORITY</span></div>
+<div class="scenario-list">{% for item in scenarios %}
+  <article class="scenario-row"><div class="case-index">{{ item.scenario_id }}</div><div class="case-body"><h2><a href="/scenarios/{{ item.scenario_id }}">{{ item.name }} <span aria-hidden="true">↗</span></a></h2><p class="source-excerpt">{{ item.body_text }}</p><div class="meta-line"><span>Ticket {{ item.ticket_id }}</span><span>Source v{{ item.source_version }}</span><span>{{ item.episode_count }} persisted episode{% if item.episode_count != 1 %}s{% endif %}</span>{% if item.scenario_id in offline_cases %}<span>OFFLINE: {{ offline_cases[item.scenario_id].judgment | replace('_',' ') }}</span>{% endif %}</div></div></article>
+{% else %}<div class="empty-state">No synthetic scenarios are present in this database. The workbench does not create them on startup.</div>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible issue in the local synthetic reference.
+body:
+  - type: markdown
+    attributes:
+      value: Do not include real customer data, credentials, or vulnerability details.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps and expected result
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Python and uv versions
+    validations:
+      required: false

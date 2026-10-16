@@ -1,0 +1,20 @@
+{
+  "schema": "scoperelay-synthetic-fixture-manifest-v1",
+  "classification": "SYNTHETIC_ONLY",
+  "source_paths": "Preserved because the frozen static release manifest binds these paths.",
+  "files_sha256": {
+    "fixtures/scenarios/oracle_labels.json": "979fef3ba02688b0a4eda78d13cc1e7550cb76116636205b9434081b720f23a2",
+    "fixtures/scenarios/source_texts.json": "5e2b5dcf36bcead0c29cd0e4efbf9877f5fcd246b575af66e053b2c8b3c82845"
+  },
+  "source_binding": {
+    "scenario": "SC-01",
+    "source_id": "source-01",
+    "ticket_id": "T-001",
+    "version": 1,
+    "body_sha256": "bf1ebfc9ca74c99714d35004c4449e3d97b99dabac0b57564739e8a717c692a7",
+    "quote_code_point_span": [0, 72],
+    "reference": "docs/reports/TASK07G_STRUCTURED_LIVE_VERIFICATION_REPORT.md"
+  },
+  "offline_scenarios": ["SC-01", "SC-02", "SC-03", "SC-04", "SC-05", "SC-06", "SC-07", "SC-08"],
+  "oracle_labels_are_evaluator_only": true
+}

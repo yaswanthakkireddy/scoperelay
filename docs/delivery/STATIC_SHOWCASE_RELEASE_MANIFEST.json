@@ -1,0 +1,66 @@
+{
+  "schema": "scoperelay-static-showcase-release-v1",
+  "reviewed_at": "2026-10-15",
+  "status": "LOCAL_CANDIDATE_NOT_DEPLOYED",
+  "artifact_directory": "showcase/public",
+  "source_head": "c39175c",
+  "source_worktree_clean": false,
+  "reproducibility_limit": "HEAD alone cannot rebuild the uncommitted source tree; use the isolated Task 10 source archive and its SHA-256 instead.",
+  "source_checkpoint": {
+    "archive": "release-checkpoints/task10-static-20261015/source.zip",
+    "archive_sha256": "36b406e441e10bf73b4bf49fa17213ff1ee642d56fb56299292a3f31b1400289",
+    "archive_bytes": 184577,
+    "source_file_count": 79,
+    "lockfile": "uv.lock",
+    "verified_toolchain": "Windows CPython 3.14.6; uv 0.13.1; cached locked packages",
+    "independent_build": "release-checkpoints/task10-static-20261015/independent/source/showcase/public",
+    "verification_report": "docs/reports/SCOPERELAY_TASK10_STATIC_RELEASE_CANDIDATE.md"
+  },
+  "target": {
+    "team_slug": "yaswankum2622-codes-projects",
+    "team_id": "team_GrsBpdaf2wUy7YqVX6gHeRye",
+    "project_name": "scoperelay-showcase",
+    "project_id": "prj_HBTlLDZ7YxFwjiOUWP6jJHJ4jW0y",
+    "intended_environment_after_separate_approval": "production",
+    "current_production_deployment": "dpl_89pgyxx2SWs3rm97XkC68s1eo2Y8",
+    "aliases": [
+      "https://scoperelay-showcase.vercel.app/",
+      "https://scoperelay-showcase-yaswankum2622-codes-projects.vercel.app/"
+    ]
+  },
+  "evidence": {
+    "release_report": "docs/reports/SCOPERELAY_INTERACTIVE_HARNESS_FINAL_RELEASE.md",
+    "historical_live_report": "docs/reports/TASK07G_STRUCTURED_LIVE_VERIFICATION_REPORT.md",
+    "trace_builder": "src/scoperelay/evaluation/trace_manifest.py",
+    "offline_builder": "src/scoperelay/evaluation/public_showcase.py",
+    "source_fixture": "fixtures/scenarios/source_texts.json",
+    "scenario": "SC-01",
+    "source_id": "source-01",
+    "source_version": 1,
+    "source_sha256": "bf1ebfc9ca74c99714d35004c4449e3d97b99dabac0b57564739e8a717c692a7",
+    "quote_code_point_span": [0, 72],
+    "trace_classification": "RECORDED_REPLAY",
+    "historical_generations": 4,
+    "new_generations": 0,
+    "offline_case_count": 8,
+    "protected_resource": "NOT_ATTEMPTED"
+  },
+  "files_sha256": {
+    "app.css": "1a44a1ae872ad4eea39fe0993e9b1126cc3f8dbb6f1e65d1151ad849503ec20d",
+    "app.js": "b0776be2589584b02a3d6a2719c700e2b9d3e2529049d87537d7e53f28116bf5",
+    "data.json": "081a1515b91b331d43e2679a83b2dd5cdb39d55273f5d4d08a8d4efaa595917c",
+    "demo.js": "b9c95d27068c4971ca9dbdbac09e2b23cff8804f65a4344a8b9476c0c9caaae1",
+    "favicon.svg": "a8c6e789f3b34b7112fc4f358e30c1da592f0bf2da43f16ea07fad2e5ae9503e",
+    "index.html": "dd6e8604a9c8a467a1fe080a89bb1c115711192a6a93983700931a4cc0ac8fc4",
+    "trace.json": "83fa22a9a649bc88482eecffa0ab3e6cac037d99cee72902b81cf93e005455c4",
+    "vercel.json": "2bb9052dae809f862e62441804cb13eeaabc096639352226b7d64e63602a1cb0"
+  },
+  "hard_exclusions": [
+    "Python backend",
+    "SQLite database",
+    "provider credentials or model requests",
+    "API-108/API-109",
+    "supervisor approval or protected effect",
+    "external delivery"
+  ]
+}
