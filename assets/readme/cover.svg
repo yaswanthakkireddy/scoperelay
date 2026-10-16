@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+  <title id="title">ScopeRelay: a proposal is not permission</title>
+  <desc id="desc">A local-first two-agent security reference. Working offline sandbox, historical model evidence, no public live inference.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091827"/><stop offset="1" stop-color="#122c3d"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#50dfb6"/><stop offset="1" stop-color="#64baff"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8db8cf" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1280" height="440" rx="22" fill="url(#bg)"/><rect width="1280" height="440" rx="22" fill="url(#grid)"/>
+  <path d="M56 66H108" stroke="url(#accent)" stroke-width="5"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="126" y="73" fill="#a4c6d9" font-size="17" letter-spacing="3">SCOPERELAY / ENGINEERING REFERENCE</text>
+    <text x="54" y="154" fill="#f4f9ff" font-size="57" font-weight="700">A proposal is</text>
+    <text x="54" y="220" fill="#62dfbb" font-size="57" font-weight="700">not permission.</text>
+    <text x="56" y="269" fill="#b5cad8" font-size="21">Two agents. Independent authority. Inspectable evidence.</text>
+    <g transform="translate(56 310)">
+      <rect width="237" height="42" rx="21" fill="#153c37" stroke="#39796c"/><text x="18" y="27" fill="#a5f2d9" font-size="15">RUNNABLE LOCAL SANDBOX</text>
+      <rect x="251" width="226" height="42" rx="21" fill="#1b3047" stroke="#3c5878"/><text x="269" y="27" fill="#b7d9ff" font-size="15">HISTORICAL AI EVIDENCE</text>
+    </g>
+    <text x="56" y="403" fill="#8ca8bb" font-size="14">Synthetic data only. Public Live AI and protected effects are not enabled.</text>
+    <g transform="translate(862 86)">
+      <circle cx="148" cy="128" r="117" fill="#0b202c" stroke="#36546a"/>
+      <circle cx="148" cy="128" r="84" fill="none" stroke="#416c80" stroke-dasharray="5 10"/>
+      <path d="M148 50l55 22v53c0 40-22 65-55 82-33-17-55-42-55-82V72z" fill="#173c3e" stroke="#63dfbc" stroke-width="2"/>
+      <path d="M124 128l17 18 34-39" fill="none" stroke="#78ebc9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="3" y="233" width="290" height="36" rx="18" fill="#173042"/>
+      <text x="148" y="257" text-anchor="middle" fill="#c0d6e5" font-size="14" letter-spacing="2">EVIDENCE BEFORE ACTION</text>
+    </g>
+  </g>
+</svg>

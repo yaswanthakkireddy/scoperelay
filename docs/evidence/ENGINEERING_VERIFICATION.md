@@ -49,6 +49,19 @@ Confirmed causes: six copied UTF-8 assets were semantically identical; Windows `
 - Historical Task 07G: four previously authorized local Ollama generations for synthetic SC-01; report-backed evidence of separate A/B tool-feedback loops and zero protected effects. This verification made no new inference.
 - Owner-approved historical video: 30.44 seconds, MP4 size 1,961,825 bytes; SHA-256 `52afe25674aa4bbbd8e79d0870bfd6689bceef401b5544356043a689e727b98f`. Owner playback approval is not an independent media/legal audit.
 
+## Local executable demo recheck
+
+On 2026-10-16, the current Python 3.13.16 checkout was exercised again without provider inference:
+
+- `uv run --locked pytest tests/integration/test_sandbox_10a.py tests/integration/test_sandbox_10b.py tests/integration/test_sandbox_10c.py tests/integration/test_sandbox_10d.py tests/integration/test_workbench_06a.py -o addopts='' -q`: **57 passed, 1 warning** (the existing Starlette/httpx deprecation).
+- `uv run --locked python -m scoperelay.evaluation.offline_scenarios`: eight scenarios; SC-01 bounded proposal, SC-02–SC-05 boundary rejected, SC-06 preapproval only, SC-07 clarify unsent, SC-08 semantic residual proposal. Model generations, protected attempts, and accepted effects were all zero.
+- Started the actual sandbox CLI on `127.0.0.1:8770` with `--enable-local-sandbox` and a fresh disposable data directory outside the repository. No live flag was supplied.
+- An automated Edge browser clicked Guided demo → Run offline scenario and observed `SC-01`, `COMPLETE`, `ALLOW`, `PROPOSED`, two scoped-tool timeline entries, zero model requests, and protected effect disabled.
+- The same browser selected Challenge lab → SC-03 and observed `DENY` with zero model requests. Selecting Local live SC-01 displayed `LIVE UNAVAILABLE`; no live run was submitted. The browser observed no off-loopback requests.
+- [The README sandbox screenshot](../../assets/readme/local-sandbox.png) was captured from that actual new offline SC-01 execution. It is neither historical model evidence nor a fabricated UI mockup. The artwork in `assets/readme/*.svg` is explanatory design, not additional execution evidence.
+
+Reproduce the local interaction using [the README walkthrough](../../README.md#try-the-working-local-sandbox). This verifies executable local code with scripted turns; it does not establish fresh genuine LLM success, public hosting readiness, or protected-action release readiness.
+
 ## Not established
 
 The clean-checkout CI regression was caused by two integration tests depending on ignored generated `showcase/public/data.json`. The repaired tests build exports in `tmp_path` and retain explicit missing-export fail-closed coverage. Before repository recreation, hosted Offline checks run `38894892068` on `111e79b` passed every configured step; the original CI metadata is archived privately. Dependency review stopped before analysis because that repository's dependency graph was disabled. Current workflow results must be read from the current repository's Actions page. No type checker is configured. Vercel disconnection relies on the owner's Settings → Git evidence; it has not been independently re-read here. No independent security audit, signed raw-trace proof, public live-inference entitlement, protected-effect release, or universal intent/injection correctness is claimed. The known coherent-rollback xfail remains visible and blocks protected-effect release.

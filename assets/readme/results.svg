@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="204" viewBox="0 0 1280 204" role="img" aria-labelledby="title desc">
+  <title id="title">Verified engineering results</title>
+  <desc id="desc">420 tests passed, one known expected failure. Eight of eight static hashes match. Eight scripted offline cases. One historical two-agent model run; not a repeatability benchmark.</desc>
+  <rect width="1280" height="204" rx="18" fill="#0d2030"/>
+  <g stroke="#2a4659"><path d="M320 28v145M640 28v145M960 28v145"/></g>
+  <g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <g fill="#69e2c1" font-size="49" font-weight="700"><text x="160" y="79">420</text><text x="480" y="79">8 / 8</text><text x="800" y="79">8</text><text x="1120" y="79">2</text></g>
+    <g fill="#e5f1fa" font-size="18" font-weight="600"><text x="160" y="113">TESTS PASSED</text><text x="480" y="113">EXACT STATIC HASHES</text><text x="800" y="113">OFFLINE SCENARIOS</text><text x="1120" y="113">GENUINE AGENTS</text></g>
+    <g fill="#a6bece" font-size="15"><text x="160" y="147">1 known rollback xfail retained</text><text x="480" y="147">Reproduced on Python 3.13</text><text x="800" y="147">Scripted turns, not model evals</text><text x="1120" y="147">1 historical run / 4 generations</text></g>
+    <text x="640" y="185" fill="#8faabd" font-size="13">Case-specific evidence, not certification. Protected effects remain disabled for release.</text>
+  </g>
+</svg>

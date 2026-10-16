@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="title desc">
+  <title id="title">ScopeRelay: from untrusted request to bounded proposal</title>
+  <desc id="desc">Agent A reads the assigned immutable ticket. Trusted code uniquely binds the exact quotation and independently checks authority, ownership and recipient scope. H1 and H2 are trusted, H3 and H4 are lower-trust evidence. Agent B reads verified status and proposes. Both roles require a tool result and continuation. Protected effects are gated off in this demo.</desc>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#86aabe" stroke-width="1.5"/></marker></defs>
+  <rect width="1280" height="780" rx="20" fill="#0b1926"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="40" y="48" fill="#eef6ff" font-size="27" font-weight="700">Two agents propose. Trusted code owns the boundary.</text>
+    <text x="40" y="78" fill="#a5bece" font-size="17">Runtime architecture / scripted turns by default in the local sandbox</text>
+    <rect x="32" y="108" width="1216" height="156" rx="14" fill="#11283b" stroke="#355773"/>
+    <text x="54" y="138" fill="#8dc9f5" font-size="14" letter-spacing="2">01 / INTERPRET: MODEL OUTPUT IS UNTRUSTED</text>
+    <rect x="55" y="161" width="288" height="78" rx="10" fill="#18374c" stroke="#4a7b9c"/>
+    <text x="76" y="191" fill="#eaf5ff" font-size="20" font-weight="600">Synthetic ticket</text><text x="76" y="218" fill="#abc9dc" font-size="15">Customer text cannot grant rights</text>
+    <rect x="495" y="161" width="288" height="78" rx="10" fill="#18374c" stroke="#62bff1"/>
+    <text x="516" y="191" fill="#eaf5ff" font-size="20" font-weight="600">Agent A / interpreter</text><text x="516" y="218" fill="#abc9dc" font-size="15">Chooses an exact quotation</text>
+    <rect x="935" y="161" width="288" height="78" rx="10" fill="#18374c" stroke="#4a7b9c"/>
+    <text x="956" y="191" fill="#eaf5ff" font-size="20" font-weight="600">Immutable source</text><text x="956" y="218" fill="#abc9dc" font-size="15">Assigned ticket / version / digest</text>
+    <g fill="none" stroke="#86aabe" stroke-width="2" marker-end="url(#arrow)"><path d="M343 199H484"/><path d="M783 183H925"/><path d="M935 222H793"/></g>
+    <text x="813" y="174" fill="#abc9dc" font-size="12">scoped read</text><text x="802" y="247" fill="#abc9dc" font-size="12">result + continuation</text>
+    <path d="M639 239V286H225V353" fill="none" stroke="#86aabe" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="658" y="287" fill="#b4c7d4" font-size="13">Quotation is evidence, not authority</text>
+    <rect x="32" y="309" width="1216" height="178" rx="14" fill="#0c2c2b" stroke="#49ad94" stroke-width="2"/>
+    <text x="54" y="340" fill="#8ee5cc" font-size="14" letter-spacing="2">02 / VERIFY: TRUSTED APPLICATION CODE</text>
+    <rect x="55" y="363" width="340" height="94" rx="10" fill="#143d36" stroke="#398774"/>
+    <text x="76" y="393" fill="#e8fff5" font-size="20" font-weight="600">Bind the exact source</text><text x="76" y="420" fill="#abd9ca" font-size="15">Unique quote + source/version/digest</text><text x="76" y="441" fill="#abd9ca" font-size="15">Zero or multiple matches fail</text>
+    <rect x="466" y="363" width="340" height="94" rx="10" fill="#143d36" stroke="#398774"/>
+    <text x="487" y="393" fill="#e8fff5" font-size="20" font-weight="600">Check independent records</text><text x="487" y="420" fill="#abd9ca" font-size="15">Grant, policy, assignment, ownership</text><text x="487" y="441" fill="#abd9ca" font-size="15">Contact eligibility, allowed fields</text>
+    <rect x="877" y="363" width="346" height="94" rx="10" fill="#143d36" stroke="#398774"/>
+    <text x="898" y="393" fill="#e8fff5" font-size="20" font-weight="600">Build a scoped handoff</text><text x="898" y="420" fill="#abd9ca" font-size="15">H1/H2: trusted authority + facts</text><text x="898" y="441" fill="#abd9ca" font-size="15">H3/H4: lower-trust evidence</text>
+    <g fill="none" stroke="#86aabe" stroke-width="2" marker-end="url(#arrow)"><path d="M395 409H455"/><path d="M806 409H866"/><path d="M1050 457V510H636V572"/></g>
+    <rect x="32" y="534" width="1216" height="132" rx="14" fill="#11283b" stroke="#355773"/>
+    <text x="54" y="564" fill="#8dc9f5" font-size="14" letter-spacing="2">03 / PROPOSE: NOT A DELIVERY RECEIPT</text>
+    <rect x="55" y="582" width="340" height="58" rx="10" fill="#18374c" stroke="#4a7b9c"/><text x="76" y="617" fill="#eaf5ff" font-size="19">Verified status / scoped read</text>
+    <rect x="466" y="582" width="340" height="58" rx="10" fill="#18374c" stroke="#62bff1"/><text x="487" y="617" fill="#eaf5ff" font-size="19">Agent B / bounded communicator</text>
+    <rect x="877" y="582" width="346" height="58" rx="10" fill="#18374c" stroke="#4a7b9c"/><text x="898" y="617" fill="#eaf5ff" font-size="19">Persist proposal + audit evidence</text>
+    <g fill="none" stroke="#86aabe" stroke-width="2" marker-end="url(#arrow)"><path d="M466 591H405"/><path d="M395 630H456"/><path d="M806 612H867"/></g>
+    <text x="406" y="653" fill="#abc9dc" font-size="11">result + continuation</text>
+    <rect x="32" y="692" width="1216" height="58" rx="12" fill="#34271f" stroke="#af805d"/>
+    <text x="54" y="728" fill="#ffd4ad" font-size="18" font-weight="600">RELEASE GATE CLOSED</text>
+    <text x="323" y="728" fill="#e1c7b1" font-size="17">No protected commit, approval consumption, or external delivery in this demo.</text>
+  </g>
+</svg>
